@@ -1,0 +1,29 @@
+<!--
+  Generated template for the EmailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="hcolor">
+    <ion-title>Email</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div padding>
+    <ion-item>
+      <ion-label color="primary" stacked>To</ion-label>
+      <ion-input [(ngModel)]="to" type="text" value="{{emailInfo.email}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked> Subject</ion-label>
+      <ion-input [(ngModel)]="body" type="text" placeholder="Type your Subject"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked> Body Content</ion-label>
+      <ion-input [(ngModel)]="subject" type="text" placeholder="Type your content"></ion-input>
+    </ion-item>
+    <button ion-button block (click)="send()"> Send</button>
+  </div>
+</ion-content>

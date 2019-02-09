@@ -1,0 +1,34 @@
+page-subjects {
+  
+  .card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+    .card {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 
+      -1px -1px 1px #111, 
+      2px 2px 1px #363636;
+      
+    }
+  
+    .thumbnail img { // Resize the image to be the same height
+      height:180px;
+      width:100%;
+  }
+ 
+  
+  }
+
+}

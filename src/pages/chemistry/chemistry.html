@@ -1,0 +1,36 @@
+<!-- header of page is encapasilated by nav bar and title ion tags which were provided by the ionic documentation -->
+<ion-header>
+  <ion-navbar color="hcolor">
+    <ion-title>Available Tutors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- content is encapasilated by grid, item and thumbnail tags provided by the ionic documenatation -->
+<ion-content>
+  <ion-grid>
+    <ion-list>
+      <!-- ngfor will display the varaibles from the array (for Chemistrytutors) in a our tutor provider. -->
+      <ion-item *ngFor="let chemistryTList of chemistryTLists">
+        <ion-thumbnail item-start>
+          <!-- this image source references from the vairable using binding via '{{ }}' -->
+          <img src="{{chemistryTList.img}}">
+        </ion-thumbnail>
+        <!--  binding reference for name  -->
+        <h2>{{chemistryTList.name}}</h2>
+        <p>{{chemistryTList.Uni}}</p>
+        <!--  binding reference for university-->
+        <p>{{chemistryTList.qual}}</p>
+        <!-- email(..) method is called after button is clicked this then uses the information in the tutor provider-->
+        <p></p>
+        <p></p>
+        <button ion-button clear item-end (click)="sendEmail()">
+          <ion-icon name="mail"></ion-icon>
+        </button>
+        <!-- call(..) method is also called after button is clicked this then uses the information in the tutor provider-->
+        <button ion-button clear item-end (click)="call()">
+          <ion-icon name="call"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+</ion-content>

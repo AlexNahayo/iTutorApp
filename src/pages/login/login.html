@@ -1,0 +1,58 @@
+<ion-header hidden>
+  <!-- We are making the nav bar hidden to look more modern -->
+  <ion-navbar color="primary">
+    <!-- Set the color of the top navigation bar -->
+    <ion-title text-center>
+      iTutor
+      <!--App Name-->
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!--Here we specify the content-->
+  <ion-item text-center no-lines>
+    <!--just used as a wrapper here-->
+    <ion-icon name="school" class="logo" color="light"></ion-icon>
+    <!--This icon is being used as our Logo-->
+  </ion-item>
+
+  <ion-item text-center no-lines>
+    <h1>iTutor</h1>
+    <h6>Finding a tutor has never been so easy!</h6>
+    <!--Slogan-->
+  </ion-item>
+
+  <ion-grid style="width: 75%;">
+    <!--Create a grid-->
+    <ion-row class="rowStyle">
+      <!-- Insert in the row -->
+      <ion-icon name="mail" color="primary"></ion-icon>
+      <!--We have used [(ngModel)]="name" directive so this way this input field is bounded with the variable email in the .ts file-->
+      <ion-input type="email" placeholder="your email" [(ngModel)]="credentials.email"></ion-input>
+      <!-- Email input -->
+    </ion-row>
+
+    <ion-row class="rowStyle">
+      <ion-icon name="key" color="primary"></ion-icon>
+      <!--We have used [(ngModel)]="name" directive so this way this input field is bounded with the variable password in the .ts file-->
+      <ion-input type="password" placeholder="your password" [(ngModel)]="credentials.password"></ion-input>
+      <!-- Pasword input -->
+    </ion-row>
+
+    <ion-row>
+      <button ion-button block clear color="light" (click)="passwordreset()">Forgot login details ? Get Help</button>
+      <!-- Create a Sign Up button. If we click the gotoSignup() function is executed in login.ts-->
+    </ion-row>
+
+    <ion-row>
+      <button ion-button block round outline color="light" style="margin-top: 5px;" (click)="signin()">Login</button>
+      <!-- Create a login button with a function login()-->
+    </ion-row>
+  </ion-grid>
+
+  <button ion-button block clear color="light" (click)="signup()">Don't have an account? Sign Up</button>
+  <!-- Create a Sign Up button. If we click the gotoSignup() function is executed in login.ts-->
+
+</ion-content>

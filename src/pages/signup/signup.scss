@@ -1,0 +1,35 @@
+page-signup {
+
+    ion-content {
+        .scroll-content { // Nested class alowed in scss
+            background-color: map-get($colors, primary) // map-get is a function that scss provides 
+        }
+    }
+
+    .item {
+        background-color: map-get($colors, primary)
+    }
+    
+    .logo{
+        font-size: 25vh; // Font size relative to the height view port
+        margin-top: 5px; // Original value: 40px
+        margin-bottom: 10px; // Original value: 20px
+    }
+
+    h1,h6 {
+        color: white;
+        font-size: 1em; // Ensure the font size is relative to the user's font settings
+    }
+
+    .rowStyle {
+        background-color: white; // Make the bg color of the rowStyle class white
+        padding-left: 10px; // define the padding
+        border-radius: 30px; // make the field border rounded
+        margin-top: 10px; // separate the both input fields
+        ion-icon {
+            margin-top: 13px; // Center the icon inside input field
+            margin-right: 5px; // Distance between the icon and the placeholder => Original value = 10px
+        }
+    }
+}
+

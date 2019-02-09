@@ -1,0 +1,42 @@
+<ion-header hidden>
+  <!-- We are making the nav bar hidden to look more modern -->
+  <ion-navbar color="primary">
+    <!-- Set the color of the top navigation bar -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--Here we specify the content-->
+  <ion-item text-center no-lines>
+    <!--just used as a wrapper here-->
+    <ion-icon name="school" class="logo" color="light"></ion-icon>
+    <!--This icon is being used as our Logo-->
+  </ion-item>
+
+  <ion-item text-center no-lines>
+    <h1>My Profile</h1>
+    <!--Slogan-->
+  </ion-item>
+
+  <ion-grid style="width: 75%;">
+    <!--Create a grid-->
+
+    <ion-row>
+      <button ion-button block clear color="light" (click)="editname()">
+        <h2><b>Name: </b>{{displayName}}</h2>
+      </button>
+    </ion-row>
+
+    <ion-item text-center no-lines>
+      <h6>Tap on nick name to change it.</h6>
+      <!--Slogan-->
+    </ion-item>
+
+    <ion-row>
+      <!-- If I click in this button it will perform the function signup in the .ts file-->
+      <button ion-button block round outline color="light" style="margin-top: 20px;" (click)="logout()">Logout</button>
+      <!-- Create a Signup button -->
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

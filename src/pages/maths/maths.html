@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="hcolor">
+    <ion-title>Available Tutors</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <!--  <--padding has-header contentTop="200px"-->
+  <ion-grid>
+    <ion-list>
+      <ion-item *ngFor="let mathTList of mathTLists">
+        <ion-thumbnail item-start>
+          <img src="{{mathTList.img}}">
+        </ion-thumbnail>
+
+        <h2>{{mathTList.name}}</h2>
+        <p>{{mathTList.Uni}}</p>
+        <p>{{mathTList.qual}}</p>
+        <p></p>
+        <p></p>
+        <button ion-button clear item-end (click)="sendEmail()">
+          <ion-icon name="mail"></ion-icon>
+        </button>
+        <button ion-button clear item-end (click)="call()">
+          <ion-icon name="call"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+  </ion-grid>
+</ion-content>
