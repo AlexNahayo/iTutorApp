@@ -1,0 +1,2 @@
+# iTutorApp
+iTutor application is an innovative technology which helps students find tutors. This iTutor app can  easily tailor to the needs of students who may have specification in who they want as tutor. This app  is convenient because it holds a database of tutors in various fields of studies. The Application itself is only for demonstartion purposes and doesn't have Real Tutor capabilites. It only supports students looking for tutors. Feel free to make improvemants and to implement some of the functionality in your own apps
